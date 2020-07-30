@@ -22,6 +22,8 @@ namespace ComedyEvents.Context
         public DbSet<Gig> Gigs { get; set; }
         public DbSet<Venue> Venues { get; set; }
 
+        public DbSet<User> Users { get; set; }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(_configuration.GetConnectionString("ComedyEvent"));
